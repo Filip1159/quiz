@@ -1,0 +1,36 @@
+.slideImg {
+    height: 500px;
+}
+
+.button {
+    padding: 4px 12px;
+    background: #61dafb;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 250px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: auto 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 5px 5px 5px #aaa;;
+}
+
+.button--test {
+    margin-right: 300px;
+}
+
+.slideNavigation {
+    margin: 20px 0;
+}
+
+.menuNavigation {
+    margin-top: 60px;
+}
+
+.menuNavigation > .button {
+    background-color: #3088fb;
+}
