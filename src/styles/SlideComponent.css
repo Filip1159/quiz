@@ -19,6 +19,14 @@
     box-shadow: 5px 5px 5px #aaa;;
 }
 
+.button[disabled]:hover {
+    box-shadow: none;
+}
+
+.button[disabled] {
+    cursor: default;
+}
+
 .button--test {
     margin-right: 300px;
 }

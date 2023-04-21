@@ -1,11 +1,11 @@
-export const topics = [
-    "Cechy dobrego programisty",
-    "Historia komputerów",
-    "Szachy"
-]
+export const topics = {
+    programmer: "Cechy dobrego programisty",
+    computers: "Historia komputerów",
+    chess: "Szachy"
+}
 
 export const slides = {
-    programmerImages: [
+    programmer: [
         "/img/programmer_images/slide1.jpg",
         "/img/programmer_images/slide2.jpg",
         "/img/programmer_images/slide3.jpg",
@@ -14,7 +14,7 @@ export const slides = {
         "/img/programmer_images/slide6.jpg",
         "/img/programmer_images/slide7jpg"
     ],
-    computerHistoryImages: [
+    computers: [
         "/img/computer_history_images/slide1.png",
         "/img/computer_history_images/slide2.png",
         "/img/computer_history_images/slide3.png",
@@ -25,7 +25,7 @@ export const slides = {
         "/img/computer_history_images/slide8.png",
         "/img/computer_history_images/slide9.png"
     ],
-    chessImages: [
+    chess: [
         "/img/chess_images/slide1.png",
         "/img/chess_images/slide2.png",
         "/img/chess_images/slide3.png",
