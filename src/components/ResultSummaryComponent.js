@@ -1,6 +1,16 @@
 import React, {useContext} from 'react'
 import {QuizContext} from "../store/QuizContext";
 import {questions, topics} from "../store/QuizData";
+import './../styles/ResultSummaryComponent.css'
+
+const summaryText = score => {
+    switch (score) {
+        case 0: return "Ughhh... Try again"
+        case 1: return "Keep learning!"
+        case 2: return "You're nearly there!"
+        case 3: return "Well done! Congrats!"
+    }
+}
 
 export const ResultSummaryComponent = () => {
     const { state: { responses, topic } } = useContext(QuizContext)
@@ -20,9 +30,9 @@ export const ResultSummaryComponent = () => {
     return (
         <div className="resultSummaryComponent">
             <h1>{`Your score is: ${percentageScore}%`}</h1>
-            <div>{topicName}</div>
+            <div id="topicName">{topicName}</div>
             <div>{`You answered correctly to ${correctCount}/3 questions!`}</div>
-            <div>Congratulations!</div>
+            <div>{summaryText(correctCount)}</div>
         </div>
     )
 }
