@@ -6,6 +6,10 @@ export const quizReducer = (state, action) => {
         }
         case "CLEAR":
             return { responses: [] }
+        case "SET_TOPIC": {
+            console.log("SET_TOPIC")
+            return { ...state, topic: action.topic }
+        }
         case "ADD_RESPONSE": {
             console.log("ADD_RESPONSE")
             return { ...state, responses: [...state.responses, action.response] }

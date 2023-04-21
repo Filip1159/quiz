@@ -23,6 +23,14 @@
     width: 400px;
 }
 
+label {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
 .radioWrapper:hover {
     background: aliceblue;
     transition: .2s;

@@ -18,13 +18,14 @@ export const QuestionComponent = () => {
     const isButtonDisabled = isNaN(selectedRadio)
 
     const nextQuestion = () => {
+        dispatch({type: 'ADD_RESPONSE', response: selectedRadio})
         setSelectedRadio(NaN)
         if (questionNumberInt < 2) {
-            dispatch({type: 'ADD_RESPONSE', response: selectedRadio})
             setQuestionNumberInt(questionNumberInt + 1)
             navigate(`/question/${topic}/${questionNumberInt + 1}`)
         } else {
             setQuestionNumberInt(0)
+            dispatch({ type: "SET_TOPIC", topic })
             navigate('/summary')
         }
     }
@@ -35,9 +36,8 @@ export const QuestionComponent = () => {
                 <h1 className="header">{question.text}</h1>
                 {
                     question.answers.map((answer, i) => (
-                        <div className="radioWrapper" onClick={() => setSelectedRadio(i)}>
-                            <input name={`radio${i}`} type="radio"
-                                   checked={selectedRadio === i}/>
+                        <div key={i} className="radioWrapper" onClick={() => setSelectedRadio(i)}>
+                            <input name={`radio${i}`} type="radio" checked={selectedRadio === i} readOnly />
                             <label htmlFor={`radio${i}`}>{answer}</label>
                         </div>
                     ))
