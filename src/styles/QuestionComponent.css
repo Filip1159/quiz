@@ -1,0 +1,12 @@
+.questionComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px;
+}
+
+.radioWrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}

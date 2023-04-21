@@ -1,0 +1,24 @@
+.fancyButton {
+    padding: 4px 12px;
+    background: #61dafb;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 250px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: auto 20px;
+    cursor: pointer;
+}
+
+.fancyButton:hover {
+    box-shadow: 5px 5px 5px #aaa;;
+}
+
+.fancyButton[disabled]:hover {
+    box-shadow: none;
+}
+
+.fancyButton[disabled] {
+    cursor: default;
+}

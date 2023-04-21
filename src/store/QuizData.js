@@ -68,7 +68,7 @@ export const questions = {
             correct: 2
         }
     ],
-    computerHistory: [
+    computers: [
         {
             text: "Który z tych komputerów został stworzony przez Polaków?",
             answers: [
