@@ -1,11 +1,13 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import './../styles/SlideComponent.css'
 import './../styles/fancyButton.css'
 import {useNavigate, useParams} from "react-router-dom";
 import {slides, topics} from "../store/QuizData";
+import {QuizContext} from "../store/QuizContext";
 
 export const SlideComponent = () => {
     const { topic, slideNumber } = useParams();
+    const { dispatch } = useContext(QuizContext)
     const [slideNumberInt, setSlideNumberInt] = useState(parseInt(slideNumber))
     const [topicName, setTopicName] = useState(topic)
 
@@ -32,8 +34,13 @@ export const SlideComponent = () => {
         navigate(`/slides/${newTopic}/0`)
     }
 
+    const navigateToTests = () => {
+        dispatch({type: 'SET_TOPIC', topic })
+        navigate('/question')
+    }
+
     return (
-        <div>
+        <div className="slideComponent fancyBackground">
             <h1>{header}</h1>
             <img className="slideImg" src={imgUrl} alt="slide" />
             <div className="slideNavigation">
@@ -41,7 +48,7 @@ export const SlideComponent = () => {
                 <button className="fancyButton" disabled={isNextDisabled} onClick={nextSlide}>Next &gt;</button>
             </div>
             <div className="menuNavigation">
-                <button className="fancyButton button--test">TEST</button>
+                <button className="fancyButton button--test" onClick={navigateToTests}>TEST</button>
                 <button className="fancyButton" onClick={() => changeTopic('programmer')}>Cechy dobrego programisty</button>
                 <button className="fancyButton" onClick={() => changeTopic('computers')}>Historia komputerów</button>
                 <button className="fancyButton" onClick={() => changeTopic('chess')}>Szachy</button>

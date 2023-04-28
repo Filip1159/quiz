@@ -4,11 +4,17 @@ export const quizReducer = (state, action) => {
             console.log("dupa")
             return {}
         }
-        case "CLEAR":
-            return { responses: [] }
         case "SET_TOPIC": {
             console.log("SET_TOPIC")
-            return { ...state, topic: action.topic }
+            return { ...state, topic: action.topic, responses: [] }
+        }
+        case "SET_CURRENT_QUESTION_NUMBER": {
+            console.log("SET_CURRENT_QUESTION_NUMBER")
+            return { ...state, currentReviewNumber: 0, currentQuestionNumber: action.number }
+        }
+        case "SET_CURRENT_REVIEW_NUMBER": {
+            console.log("SET_CURRENT_REVIEW_NUMBER")
+            return { ...state, currentQuestionNumber: 0, currentReviewNumber: action.number }
         }
         case "ADD_RESPONSE": {
             console.log("ADD_RESPONSE")

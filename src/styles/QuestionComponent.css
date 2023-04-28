@@ -16,27 +16,46 @@
 .radioWrapper {
     display: flex;
     flex-direction: row;
-    cursor: pointer;
     transition: .2s;
     padding: 15px;
     border-radius: 5px;
     width: 400px;
 }
 
-label {
+.radioWrapper--question {
     cursor: pointer;
 }
 
-input[type="radio"] {
+.radioWrapper--question input[type="radio"] {
     cursor: pointer;
 }
 
-.radioWrapper:hover {
-    background: aliceblue;
+.radioWrapper--summary input[type="radio"] {
+    cursor: default;
+}
+
+.radioWrapper--question label {
+    cursor: pointer;
+}
+
+.radioWrapper--summary label {
+    cursor: default;
+}
+
+.radioWrapper--question:hover {
+    background-color: rgba(100, 100, 200, 0.2);
     transition: .2s;
 }
 
 .questionButton {
     margin-top: 15px;
     align-self: center;
+}
+
+.radioWrapper--correct {
+    background-color: #5c3;
+}
+
+.radioWrapper--incorrect {
+    background-color: #c55;
 }

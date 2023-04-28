@@ -1,5 +1,13 @@
+.slideComponent {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
 .slideImg {
-    height: 500px;
+    height: 450px;
 }
 
 .button--test {

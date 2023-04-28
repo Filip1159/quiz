@@ -2,6 +2,8 @@ import React, {useContext} from 'react'
 import {QuizContext} from "../store/QuizContext";
 import {questions, topics} from "../store/QuizData";
 import './../styles/ResultSummaryComponent.css'
+import './../styles/fancyButton.css'
+import {Link} from "react-router-dom";
 
 const summaryText = score => {
     switch (score) {
@@ -33,6 +35,9 @@ export const ResultSummaryComponent = () => {
             <div id="topicName">{topicName}</div>
             <div>{`You answered correctly to ${correctCount}/3 questions!`}</div>
             <div>{summaryText(correctCount)}</div>
+            <Link to={'/review'}>
+                <button className="fancyButton">Review Your answers</button>
+            </Link>
         </div>
     )
 }

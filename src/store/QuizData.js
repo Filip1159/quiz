@@ -12,7 +12,7 @@ export const slides = {
         "/img/programmer_images/slide4.jpg",
         "/img/programmer_images/slide5.jpg",
         "/img/programmer_images/slide6.jpg",
-        "/img/programmer_images/slide7jpg"
+        "/img/programmer_images/slide7.jpg"
     ],
     computers: [
         "/img/computer_history_images/slide1.png",
